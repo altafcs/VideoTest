@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsm-vk-dTz">
+                                <rect key="frame" x="205.66666666666663" y="307.66666666666669" width="179.33333333333337" height="43.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Dsm-vk-dTz" secondAttribute="height" multiplier="179:43" id="suW-0e-Nnv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Apply Filter"/>
+                                <connections>
+                                    <action selector="applyFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7hB-60-sSQ"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGU-PH-dHc">
+                                <rect key="frame" x="8" y="61.999999999999986" width="377" height="229.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iGU-PH-dHc" secondAttribute="height" multiplier="361:220" id="3cn-VR-jqK"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYZ-xe-tH6" customClass="RangeUISlider" customModule="RangeUISlider">
+                                <rect key="frame" x="10" y="361" width="373" height="24"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="kc8-iM-nfy"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rangeSelectedColor">
+                                        <color key="value" systemColor="tintColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showKnobsLabels" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="knobsLabelTopPosition" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mw0-Ps-GCA">
+                                <rect key="frame" x="195.66666666666666" y="0.0" width="2" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2" id="mjC-Lh-AgN"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2O-qx-YVn">
+                                <rect key="frame" x="23" y="405" width="354" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Crop"/>
+                                <connections>
+                                    <action selector="trimVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O8x-SQ-6p1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mvk-OA-Aod">
+                                <rect key="frame" x="8" y="307.66666666666669" width="179.66666666666666" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Mvk-OA-Aod" secondAttribute="height" multiplier="180:43" id="pB5-1c-qEl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Load"/>
+                                <connections>
+                                    <action selector="loadVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GdX-8I-8gm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Mw0-Ps-GCA" secondAttribute="bottom" id="CjW-7R-cfC"/>
+                            <constraint firstItem="Mvk-OA-Aod" firstAttribute="top" secondItem="iGU-PH-dHc" secondAttribute="bottom" constant="16" id="Glf-gb-rFf"/>
+                            <constraint firstItem="bYZ-xe-tH6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="MiC-ec-ncp"/>
+                            <constraint firstItem="iGU-PH-dHc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="OSR-Wr-Ta8"/>
+                            <constraint firstItem="Mvk-OA-Aod" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="PGb-GG-9pr"/>
+                            <constraint firstItem="iGU-PH-dHc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="3" id="S9R-K6-Gcb"/>
+                            <constraint firstItem="Dsm-vk-dTz" firstAttribute="leading" secondItem="Mw0-Ps-GCA" secondAttribute="trailing" constant="8" id="W3c-Kr-Oxv"/>
+                            <constraint firstItem="Dsm-vk-dTz" firstAttribute="top" secondItem="iGU-PH-dHc" secondAttribute="bottom" constant="16" id="Xdk-3d-QD8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bYZ-xe-tH6" secondAttribute="trailing" constant="10" id="d8d-Lw-wQT"/>
+                            <constraint firstItem="Mw0-Ps-GCA" firstAttribute="leading" secondItem="Mvk-OA-Aod" secondAttribute="trailing" constant="8" id="fDp-Zh-Rip"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iGU-PH-dHc" secondAttribute="trailing" constant="8" id="fc9-Dp-yGc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dsm-vk-dTz" secondAttribute="trailing" constant="8" id="oXL-fK-Og3"/>
+                            <constraint firstItem="Mw0-Ps-GCA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tH0-cu-hPu"/>
+                            <constraint firstItem="Mw0-Ps-GCA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uEF-KR-i9o"/>
+                            <constraint firstItem="bYZ-xe-tH6" firstAttribute="top" secondItem="Dsm-vk-dTz" secondAttribute="bottom" constant="10" id="zVc-9h-rtO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cropSlider" destination="bYZ-xe-tH6" id="fBr-Po-YeK"/>
+                        <outlet property="videoPreview" destination="iGU-PH-dHc" id="ulk-VM-ME6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
